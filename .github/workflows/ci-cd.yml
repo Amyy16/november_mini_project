@@ -55,6 +55,6 @@ jobs:
           docker rm ${{ env.CONTAINER_NAME }} || true
           docker run -d \
             --name ${{ env.CONTAINER_NAME }} \
-            -v django_db:/app/db.sqlite3 \
+            -v django_db:/app/sqlite3 \
             -p 8056:8000 \
             ${{ env.IMAGE_NAME }}:latest
